@@ -60,6 +60,9 @@ class SP500_table(Base):
 
 
 class NASDAQ_table(Base):
+# Entity class for the DB table NASDAQ companies. 
+# Manage all the operations like loading and fetching the data from the NASDAQ table.
+
     __tablename__ = 'nasdaq'
     id = Column(Integer)
     symbol = Column(String, primary_key=True)
@@ -93,6 +96,9 @@ class NASDAQ_table(Base):
                 session.commit()
 
 class DOWJONES_table(Base):
+# Entity class for the DB table DOWJONES companies. 
+# Manage all the operations like loading and fetching the data from the DOWJONES table.
+
     __tablename__ = 'dowjones'
     id = Column(Integer)
     symbol = Column(String, primary_key=True)

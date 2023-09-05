@@ -1,6 +1,6 @@
--- Table: public.dowjones
+-- Table creation queries
 
--- DROP TABLE IF EXISTS public.dowjones;
+-- Table1: public.dowjones
 
 CREATE TABLE IF NOT EXISTS public.dowjones
 (
@@ -22,9 +22,7 @@ ALTER TABLE IF EXISTS public.dowjones
     OWNER to postgres;
 
 
--- Table: public.nasdaq
-
--- DROP TABLE IF EXISTS public.nasdaq;
+-- Table2: public.nasdaq
 
 CREATE TABLE IF NOT EXISTS public.nasdaq
 (
@@ -46,9 +44,7 @@ ALTER TABLE IF EXISTS public.nasdaq
     OWNER to postgres;
 
 
--- Table: public.dowjones
-
--- DROP TABLE IF EXISTS public.dowjones;
+-- Table3: public.dowjones
 
 CREATE TABLE IF NOT EXISTS public.dowjones
 (

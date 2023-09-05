@@ -1,7 +1,7 @@
-# pangea/routes/sectors.py
 from flask import Blueprint, jsonify
 from pulse.repository.index_companies import SP500_table
 
+# Sectors calls the methods that query from DB and creating API routes
 sectors = Blueprint("sectors", __name__)
 
 @sectors.route('/sectors', methods=['GET'])

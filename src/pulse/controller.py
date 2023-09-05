@@ -9,7 +9,7 @@ class Controller():
 # Controller calls the FMPAPI and gets the JSON data. 
 # This data is passed to the tables for loading. 
 # Mainly focus on loading all the index companies from SP500, NASDAQ and DOWJONES
-#  
+
     def load_index_companies():
         sp500_api = SP500()
         sp500_json_data = sp500_api.fetch()

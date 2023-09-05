@@ -1,0 +1,16 @@
+{
+    "database": {
+        "username": "postgres",
+        "password": "Kenra123",
+        "hostname": "127.0.0.1",
+        "port": "5432",
+        "database": "pulse"
+    },
+    "FmpApi": {
+        "uri": "https://financialmodelingprep.com/api/v3/", 
+        "key": "?apikey=304459a7a227a31923b63192971bc245",
+        "sp500": "sp500_constituent",
+        "dowjones": "dowjones_constituent",
+        "nasdaq":  "nasdaq_constituent"
+    }
+}

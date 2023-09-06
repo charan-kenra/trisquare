@@ -1,8 +1,8 @@
 -- Table creation queries
 
--- Table1: public.dowjones
+-- Table1: public.sp500
 
-CREATE TABLE IF NOT EXISTS public.dowjones
+CREATE TABLE IF NOT EXISTS public.sp500
 (
     id integer,
     symbol character varying COLLATE pg_catalog."default" NOT NULL,
@@ -13,12 +13,12 @@ CREATE TABLE IF NOT EXISTS public.dowjones
     "dateFirstAdded" character varying COLLATE pg_catalog."default",
     cik character varying COLLATE pg_catalog."default",
     founded character varying COLLATE pg_catalog."default",
-    CONSTRAINT dowjones_pkey PRIMARY KEY (symbol)
+    CONSTRAINT sp500_pkey PRIMARY KEY (symbol)
 )
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS public.dowjones
+ALTER TABLE IF EXISTS public.sp500
     OWNER to postgres;
 
 

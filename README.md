@@ -8,7 +8,7 @@ TriSquare is a finance application designed to provide users with comprehensive 
 2. Create Database named pulse
 3. Clone the repository to your local machine using `git clone https://github.com/kenrasoftorg/trisquare.git'
 4. Open the cloned folder trisquare/src/pulse/scripts/pulseschema.sql
-5. Run the 3 table creation queries in postgresql under query tool and make sure tables were created
+5. Run the 4 table creation queries in postgresql under query tool and make sure tables were created
 6. Open a terminal in vscode or cmd
 7. Navigate to project directory trisquare
 8. Type pip install -r requirements.txt

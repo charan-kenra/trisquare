@@ -6,9 +6,7 @@ Base = declarative_base()
 class SP500_table(Base):
 # Entity class for the DB table SP500 companies. 
 # Manage all the operations like loading and fetching the data from the SP500 table.
-
     __tablename__ = 'sp500'
-    id = Column(Integer)
     symbol = Column(String, primary_key=True)
     name = Column(String)
     sector = Column(String)
@@ -22,18 +20,18 @@ class SP500_table(Base):
         db_connector = DatabaseConnect()
         session = db_connector.connect_db()
         with session() as session:
-            for data_entry in data:
-                existing_entry = session.query(SP500_table).filter_by(symbol=data_entry["symbol"]).first()
+            for element in data:
+                existing_entry = session.query(SP500_table).filter_by(symbol=element["symbol"]).first()
                 if not existing_entry :
                     sp500_entry = SP500_table(
-                        symbol=data_entry["symbol"],
-                        name=data_entry["name"],
-                        sector=data_entry["sector"],
-                        subSector=data_entry["subSector"],
-                        headQuarter=data_entry["headQuarter"],
-                        dateFirstAdded=data_entry["dateFirstAdded"],
-                        cik=data_entry["cik"],
-                        founded=data_entry["founded"]
+                        symbol=element["symbol"],
+                        name=element["name"],
+                        sector=element["sector"],
+                        subSector=element["subSector"],
+                        headQuarter=element["headQuarter"],
+                        dateFirstAdded=element["dateFirstAdded"],
+                        cik=element["cik"],
+                        founded=element["founded"]
                     )
                     session.add(sp500_entry)
                     
@@ -64,7 +62,6 @@ class NASDAQ_table(Base):
 # Manage all the operations like loading and fetching the data from the NASDAQ table.
 
     __tablename__ = 'nasdaq'
-    id = Column(Integer)
     symbol = Column(String, primary_key=True)
     name = Column(String)
     sector = Column(String)
@@ -78,18 +75,18 @@ class NASDAQ_table(Base):
         db_connector = DatabaseConnect()
         session = db_connector.connect_db()
         with session() as session:
-            for data_entry in data:
-                existing_entry = session.query(NASDAQ_table).filter_by(symbol=data_entry["symbol"]).first()
+            for element in data:
+                existing_entry = session.query(NASDAQ_table).filter_by(symbol=element["symbol"]).first()
                 if not existing_entry :
                     nasdaq_entry = NASDAQ_table(
-                        symbol=data_entry["symbol"],
-                        name=data_entry["name"],
-                        sector=data_entry["sector"],
-                        subSector=data_entry["subSector"],
-                        headQuarter=data_entry["headQuarter"],
-                        dateFirstAdded=data_entry["dateFirstAdded"],
-                        cik=data_entry["cik"],
-                        founded=data_entry["founded"]
+                        symbol=element["symbol"],
+                        name=element["name"],
+                        sector=element["sector"],
+                        subSector=element["subSector"],
+                        headQuarter=element["headQuarter"],
+                        dateFirstAdded=element["dateFirstAdded"],
+                        cik=element["cik"],
+                        founded=element["founded"]
                     )
                     session.add(nasdaq_entry)
                     
@@ -100,7 +97,6 @@ class DOWJONES_table(Base):
 # Manage all the operations like loading and fetching the data from the DOWJONES table.
 
     __tablename__ = 'dowjones'
-    id = Column(Integer)
     symbol = Column(String, primary_key=True)
     name = Column(String)
     sector = Column(String)
@@ -114,18 +110,18 @@ class DOWJONES_table(Base):
         db_connector = DatabaseConnect()
         session = db_connector.connect_db()
         with session() as session:
-            for data_entry in data:
-                existing_entry = session.query(DOWJONES_table).filter_by(symbol=data_entry["symbol"]).first()
+            for element in data:
+                existing_entry = session.query(DOWJONES_table).filter_by(symbol=element["symbol"]).first()
                 if not existing_entry :
                     dowjones_entry = DOWJONES_table(
-                        symbol=data_entry["symbol"],
-                        name=data_entry["name"],
-                        sector=data_entry["sector"],
-                        subSector=data_entry["subSector"],
-                        headQuarter=data_entry["headQuarter"],
-                        dateFirstAdded=data_entry["dateFirstAdded"],
-                        cik=data_entry["cik"],
-                        founded=data_entry["founded"]
+                        symbol=element["symbol"],
+                        name=element["name"],
+                        sector=element["sector"],
+                        subSector=element["subSector"],
+                        headQuarter=element["headQuarter"],
+                        dateFirstAdded=element["dateFirstAdded"],
+                        cik=element["cik"],
+                        founded=element["founded"]
                     )
                     session.add(dowjones_entry)
                     

@@ -1,9 +1,11 @@
 from pulse.fmpapi.get_api import SP500
 from pulse.fmpapi.get_api import Nasdaq
 from pulse.fmpapi.get_api import Dowjones
+from pulse.fmpapi.get_api import Stockprices
 from pulse.repository.index_companies import SP500_table
 from pulse.repository.index_companies import NASDAQ_table
 from pulse.repository.index_companies import DOWJONES_table
+from pulse.repository.stock_prices import Stock_prices_table
 
 class Controller():
 # Controller calls the FMPAPI and gets the JSON data. 
@@ -35,5 +37,14 @@ class Controller():
         dowjones_repo = DOWJONES_table()
         dowjones_repo.load_data(dowjones_json_data)
         print("loaded Dowjones API data into Dowjones table")
+
+
+        stock_price_api = Stockprices()
+        stock_price_json_data = stock_price_api.fetch()
+        print("Fetched stock price json data from API")
+
+        stock_price_repo = Stock_prices_table()
+        stock_price_repo.load_data(stock_price_json_data)
+        print("loaded stock price API data into stockprices table")
 
 

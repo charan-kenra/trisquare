@@ -12,7 +12,7 @@ class Config:
         self.settings = None
         
     def load_config(self):
-        with open('.\core\configuration\config.json') as f:
+        with open('./core/configuration/config.json') as f:
             settings = json.load(f)
             return settings
             

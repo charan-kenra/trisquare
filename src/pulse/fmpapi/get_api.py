@@ -51,3 +51,7 @@ class Dowjones(GetApi):
 # takes care of all the execution of the rest of the functionality
     def __init__(self)->None :
         super().__init__("dowjones_constituent")
+
+class Stockprices(GetApi):
+    def __init__(self)->None :
+        super().__init__("/quote/AAPL")
